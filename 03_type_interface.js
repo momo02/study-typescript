@@ -1,4 +1,5 @@
-/** 타입으로 사용되는 인터페이스(interface) */
+"use strict";
+exports.__esModule = true;
 // [Before]
 // function getStudentDetails(
 //   studentID: number

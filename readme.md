@@ -7,6 +7,7 @@
   - [3. 타입 추론 (Type Inference)](#3-타입-추론-type-inference)
   - [4. 타입 명시 (Type Annotations)](#4-타입-명시-type-annotations)
   - [5. 타입 인터페이스(Type Interface)](#5-타입-인터페이스type-interface)
+  - [6. 열거형(Enum)과 리터럴 타입](#6-열거형enum과-리터럴-타입)
 
 ---
 
@@ -77,3 +78,9 @@ tsc app.ts
 [example code](03_type_interface.ts)
 
 ---
+
+## 6. 열거형(Enum)과 리터럴 타입
+
+- 특정 프로퍼티에 들어갈 수 있는 값을 제한하고 싶을 때 크게 2가지 방식을 사용. ex) gender 타입의 값을 male/female/genderNeutral 등으로 제한하고 싶을 경우.
+  - 1. Enum (열거형) 사용 : [example code](04-1_enum.ts)
+  - 2. Literal Type 사용 (enum보다 더 심플한 방법): [example code](04-2_literal_type.ts)

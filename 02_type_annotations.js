@@ -1,3 +1,5 @@
+"use strict";
+exports.__esModule = true;
 /** 타입 명시 (Type Annotations) */
 // 변수의 타입 명시
 var studentID = 12345;
