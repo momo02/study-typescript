@@ -58,7 +58,7 @@ tsc app.ts
 - 타입스크립트에서는 타입 표기가 없는 경우 코드를 읽고 분석하여 타입을 유추하는 데 이를 타입 추론이라 함.
 - 초기 할당된 값을 바탕으로 타입을 추론.
 
-[example code](../typescript_practice/01_type_inference.ts)
+[example code](01_type_inference.ts)
 
 ---
 
@@ -66,7 +66,7 @@ tsc app.ts
 
 - 변수를 선언할 때, 변수 값의 타입을 명시함으로써 변수 값의 데이터 타입을 지정.
 
-[example code](../typescript_practice/02_type_annotations.ts)
+[example code](02_type_annotations.ts)
 
 ---
 
@@ -74,6 +74,6 @@ tsc app.ts
 
 - 타입스크립트에서는 자주 사용되는 객체의 구조를 인터페이스로 작성할 수 있고, 작성한 인터페이스는 string 이나 number 처럼 타입으로써 사용 가능.
 
-[example code](../typescript_practice/03_interface.ts)
+[example code](03_interface.ts)
 
 ---
