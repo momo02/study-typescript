@@ -74,6 +74,6 @@ tsc app.ts
 
 - 타입스크립트에서는 자주 사용되는 객체의 구조를 인터페이스로 작성할 수 있고, 작성한 인터페이스는 string 이나 number 처럼 타입으로써 사용 가능.
 
-[example code](03_interface.ts)
+[example code](03_type_interface.ts)
 
 ---
