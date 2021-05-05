@@ -8,6 +8,7 @@
   - [4. 타입 명시 (Type Annotations)](#4-타입-명시-type-annotations)
   - [5. 타입 인터페이스(Type Interface)](#5-타입-인터페이스type-interface)
   - [6. 열거형(Enum)과 리터럴 타입](#6-열거형enum과-리터럴-타입)
+  - [7. Any Type, Union Type, Type Aliases & Type Guards](#7-any-type-union-type-type-aliases--type-guards)
 
 ---
 
@@ -84,3 +85,20 @@ tsc app.ts
 - 특정 프로퍼티에 들어갈 수 있는 값을 제한하고 싶을 때 크게 2가지 방식을 사용. ex) gender 타입의 값을 male/female/genderNeutral 등으로 제한하고 싶을 경우.
   - 1. Enum (열거형) 사용 : [example code](04-1_enum.ts)
   - 2. Literal Type 사용 (enum보다 더 심플한 방법): [example code](04-2_literal_type.ts)
+
+---
+
+## 7. Any Type, Union Type, Type Aliases & Type Guards
+
+- Any Type : 말그대로 어떠한 타입의 값이든 할당 가능한 타입. 타입 체크를 하지 않는다.
+  - But ! 최대한 any타입은 쓰지않는게 좋다.
+    타입스크립트에서는 타입에 관한 더 많은 정보를 명시할 수록 더 좋다.
+    타입에러를 컴파일 시에 잡아내는것이 코드 유지보수에 용이.
+  - [example code](05_any_type.ts)
+- Union Type : 제한된 타입들을 동시에 지정하고 싶을 때 사용. ex) number,string 타입 둘다 허용하고 싶을 경우.
+  - [example code](06_union_type.ts)
+- Type Aliases : 동일한 Union Type을 가지는 변수나 함수가 코드 내에 반복 될 경우, 같은 코드를 반복하는 것 보다는 코드를 타입으로 지정하고 재활용하는 것이 좋은데 이럴때 Type Aliases 를 사용 -> 코드의 재사용성 및 가독성 향상!
+  - [example code](07_type_aliases.ts)
+- Type Guard : Union Type을 사용할 때 typeof Operator 등을 사용하여 코드 검증을 수행하는 것.
+  - [example code](08_type_guard.ts)
+  - 이 외에도 또다른 Type guard의 방식이 몇가지 더 있다. 참고 사이트 : https://www.typescriptlang.org/docs/handbook/advanced-types.html
