@@ -141,6 +141,12 @@ tsc app.ts
   - private 멤버변수는 class 내부에서만 접근 가능. 값을 읽을 수도 없음. 이렇게 비공개로 설정된 private 멤버변수에 접근하여 값을 쓰거나 읽기 위해 타입스크립트에서는 Getter와 Setter라는 컨셉을 제공한다.
 
 - Getter & Setter
+
   - get , set 키워드를 사용하여 private 멤버변수에 대한 Getter & Setter 함수를 작성할 수 있다.
   - 일반적인 클래스 내의 메소드와 다른점은 public 멤버변수에 접근하는 것과 같은 방법으로 클래스 외부에서 접근가능하다는 것 -> public 멤버변수를 호출할 때 처럼 () 괄호없이 사용가능하다.
   - [example code](13_getter_setter.ts)
+
+- Constructor의 매개변수에 Access Modifiers를 직접 적용하여 코드를 더 간결하게 작성할 수 있다.
+  - Constructor의 매개변수 앞에 Access Modifiers를 붙여주면 암묵적으로 Class 의 멤버변수로 선언이 된다ㅌ.
+  - 객체가 생성될 때 Constructor의 매개변수로 전달된 값은 Constructor 내부에서 별도로 초기화되는 코드없이 typescript 컴파일러에 의해 객체의 프로퍼티 값으로 초기화되고 할당된다.
+  - [example code](14_constructor_with_access_modifiers.ts)

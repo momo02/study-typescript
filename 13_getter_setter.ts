@@ -46,6 +46,8 @@ employee7.printEmployeeDetails();
 
 let employee8 = new Employee4("아이유", 29, "가수");
 
-employee8.fullName = "나이유";
-console.log(employee8.fullName); // Public 멤버변수를 호출할 때 처럼 () 괄호없이 getter 명을 써준다.
+employee8.fullName = "나이유"; // public 멤버변수에 값을 할당하는 것처럼 () 괄호없이 setter 명을 써준다.
+console.log(employee8.fullName); // public 멤버변수를 호출할 때 처럼 () 괄호없이 getter 명을 써준다.
 employee8.printEmployeeDetails();
+
+// Constructor 의 매개변수에 Access Modifiers를 직접 적용하여 더 간단하게
