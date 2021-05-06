@@ -9,6 +9,9 @@
   - [5. 타입 인터페이스(Type Interface)](#5-타입-인터페이스type-interface)
   - [6. 열거형(Enum)과 리터럴 타입](#6-열거형enum과-리터럴-타입)
   - [7. Any Type, Union Type, Type Aliases & Type Guards](#7-any-type-union-type-type-aliases--type-guards)
+  - [8. 함수의 타이핑, 선택적 매개 변수와 기본 매개 변수](#8-함수의-타이핑-선택적-매개-변수와-기본-매개-변수)
+  - [9. 타입스크립트의 OOP : Class & Object](#9-타입스크립트의-oop--class--object)
+  - [10. 타입스크립트의 OOP : 생성자(Constructor) / 접근 재한자(Access Modifiers) / Getter와 Setter](#10-타입스크립트의-oop--생성자constructor--접근-재한자access-modifiers--getter와-setter)
 
 ---
 
@@ -102,3 +105,42 @@ tsc app.ts
 - Type Guard : Union Type을 사용할 때 typeof Operator 등을 사용하여 코드 검증을 수행하는 것.
   - [example code](08_type_guard.ts)
   - 이 외에도 또다른 Type guard의 방식이 몇가지 더 있다. 참고 사이트 : https://www.typescriptlang.org/docs/handbook/advanced-types.html
+
+---
+
+## 8. 함수의 타이핑, 선택적 매개 변수와 기본 매개 변수
+
+- [example code](09_function.ts)
+
+---
+
+## 9. 타입스크립트의 OOP : Class & Object
+
+- OOP - 객체 지향 프로그래밍 ?
+  - 연관된 변수와 함수들을 한 덩어리로 묶어서 구조화하여 표현하는 프로그래밍 스타일
+  - 어플리케이션을 실제 세상에 존재하는 객체와 같은 단위로 쪼개고, 이러한 객체들이 서로 상호 작용함으로써 시스템이 동작.
+- Class 와 Object
+  - Class는 객체의 뼈대, 설계도, 생산틀이고, 객체들은 Class를 통해서 만들어진다.
+  - Class를 바탕으로 한 새로운 객체를 생성하는 것 -> Class의 새로운 instance (=객체)를 만드는 것.
+    Class를 통해 붕어빵 틀이 붕어빵을 찍어내듯 여러 독립된 객체들을 만들어 낼 수 있다.
+  - [example code](10_class_and_object.ts)
+
+---
+
+## 10. 타입스크립트의 OOP : 생성자(Constructor) / 접근 재한자(Access Modifiers) / Getter와 Setter
+
+- Constructor(생성자)
+  - 모든 Class 는 생성자(Constructor)라고 불리는 메소드를 갖는다. 생성자는 클래스로 부터 객체를 생성할 때 호출되며 객체의 초기화를 담당.
+  - [example code](11_constructor.ts)
+- Access Modifiers(접근 제한자)
+
+  - Access Modifiers는 클래스 속 멤버 변수(Property)와 메소드에 적용될 수 있는 키워드. 클래스 외부로부터의 접근을 통제할 수 있어 버그를 줄이고 코드의 안정성을 향상시킬 수 있다.
+  - Public : 클래스 외부에서 접근 가능 / Private : 클래스 내에서만 접근가능(비공개 멤버). 클래스 외부에서 접근 불가 / Protected : 클래스 내부 & 상속받은 자식 클래스에서 접근 가능.
+  - Access Modifiers를 명시하지 않으면, default Access Modifiers는 Public 이다.
+  - [example code](12_access_modifiers.ts)
+  - private 멤버변수는 class 내부에서만 접근 가능. 값을 읽을 수도 없음. 이렇게 비공개로 설정된 private 멤버변수에 접근하여 값을 쓰거나 읽기 위해 타입스크립트에서는 Getter와 Setter라는 컨셉을 제공한다.
+
+- Getter & Setter
+  - get , set 키워드를 사용하여 private 멤버변수에 대한 Getter & Setter 함수를 작성할 수 있다.
+  - 일반적인 클래스 내의 메소드와 다른점은 public 멤버변수에 접근하는 것과 같은 방법으로 클래스 외부에서 접근가능하다는 것 -> public 멤버변수를 호출할 때 처럼 () 괄호없이 사용가능하다.
+  - [example code](13_getter_setter.ts)
